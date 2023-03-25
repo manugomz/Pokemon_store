@@ -1,0 +1,110 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans";  
+    list-style: none;
+}
+
+.logo {
+    margin: 1%;
+}
+
+/* -------------------------------------Header-------------------------------------*/
+header{
+    background-color: #306BB3;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    width:100vw;
+}
+
+header>div{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    color: #306BB3;
+    background-color: white;
+    margin-right: 5%;
+    padding: 1%;
+    border: none;
+    border-radius: 4px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+    font-weight: 500;  
+}
+
+/* -------------------------------------Main--------------------------------------*/
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+article{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+article>p{
+    color: #1a202c81;
+}
+
+.small-text{
+    font-size: 14px;
+    color: black;
+}
+
+.main-img{
+    size: 30%;
+}
+
+
+.links-article{
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* --------------------------------------footer---------------------------------------*/
+footer{
+    background-color: #306BB3;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.page-info{
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+}
+
+.title-blue {
+    color: white;
+    font-weight: bold;
+    margin: 15px 0px;
+}
