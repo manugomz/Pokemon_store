@@ -1,0 +1,204 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans"; 
+    font-size: 1.2vw;  
+    list-style: none;
+}
+
+.logo {
+    width: 150px;
+    margin: 10px;
+}
+
+/* -------------------------------------Header-------------------------------------*/
+header{
+    background-color: #306BB3;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    width:100vw;
+}
+
+header>div{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    color: #306BB3;
+    background-color: white;
+    margin-right: 5%;
+    padding: 1%;
+    border: none;
+    border-radius: 4px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+    font-weight: 500;  
+}
+
+/* -------------------------------------Main--------------------------------------*/
+h1{
+    font-size: 3vw;
+    font-weight: 500;
+    color: #486284;
+    margin-bottom: 2%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.subtitle{
+    max-width: 35%;
+    text-align: center;
+}
+
+.filter{
+    margin: 2% 0px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+    border-bottom: 2px double #90A3BF;
+}
+
+.filter-option{
+    color: #1a202c99;
+    font-size: 1.5vw;
+}
+.filter-option:hover{
+    color: #1A202C;
+    font-weight: bold;
+}
+
+/*----------------------------------Cards ------------------------------*/
+.cards-display{
+    width: 90%;
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+    margin-left: 2%;
+}
+
+.card{
+    background-color: #DEE5ED;
+    padding: 4%;
+    border: none;
+    border-radius: 4px;
+    margin: 5% 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items:center;
+    padding: 1% 5%;
+}
+
+.heart{
+    height: 1em;
+}
+
+.pokemon-img{
+    background-color: #ffffff;
+    padding: 8%;
+    border: none;
+    width: 90%;
+    height: 80%;
+    border-radius: 4px;
+    margin: 5%;
+}
+
+.buy-button{
+    color: white;
+    background-color: #306BB3;
+    font-weight: 600;
+    padding: 5% 10%;
+    border: none;
+    border-radius: 4px;
+    margin: 0;
+}
+/*----------------------------------Cards ------------------------------*/
+
+.more-cards-info{
+    display: flex;
+    justify-content:space-between;
+    align-self: flex-end;
+    width: 50%;
+    align-items: center;
+    margin-right: 7vw;
+}
+
+.more-button {
+    color: white;
+    background-color: #306BB3;
+    width: 12vw;
+    font-weight: 600;
+    padding: 2% 2%;
+    border-radius: 4px;
+    margin: 4% 0;
+}
+
+/* --------------------------------------footer---------------------------------------*/
+footer{
+    background-color: #306BB3;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+div>ul>li {
+    padding: 10px 0px;
+}
+
+div>a>i{
+    padding-right: 20px;
+}
+
+.page-info{
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+    padding: 30px 0px;
+}
+
+.title-blue {
+    color: white;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.vision-text{
+    color: white;
+}
+
+#other-media{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0px;
+}

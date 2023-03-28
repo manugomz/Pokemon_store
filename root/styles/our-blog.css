@@ -3,14 +3,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Plus Jakarta Sans";  
+    font-family: "Plus Jakarta Sans"; 
     font-size: 1.2vw; 
     list-style: none;
 }
 
 .logo {
-    width: 15vw;
-    margin: 0.8vw;
+    width: 150px;
+    margin: 10px;
 }
 
 /* -------------------------------------Header-------------------------------------*/
@@ -53,42 +53,40 @@ button{
 
 /* -------------------------------------Main--------------------------------------*/
 h1{
-    font-size: 3vw;
-    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 500;
+    color: #486284;
 }
 
-section{
+article{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 50px 20px;
 }
 
-article{
-    width: 40%;
+article>div{
     display: flex;
-    flex-direction: column;
-    gap: 1.5vw;
-}
-article>p{
-    color: #1a202c81;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    padding: 2% 3%;
 }
 
-.small-text{
-    font-size: 1vw;
-    color: black;
+.main-text{
+    max-width: 50%;
 }
 
 .main-img{
     max-width: 40%;
 }
-
-
-.links-article{
-    color: black;
-    font-weight: bold;
-    margin: 20px;
+.subtitle{
+    max-width: 50%;
+    text-align: center;
 }
+
 
 /* --------------------------------------footer---------------------------------------*/
 footer{
@@ -111,14 +109,13 @@ div>a>i{
     display: flex;
     width: 55%;
     justify-content: space-around;
-    padding: 3vw 0px;
+    padding: 30px 0px;
 }
 
 .title-blue {
     color: white;
     font-weight: bold;
-    margin: 1vw 0px;
-    font-size: 1.5vw;
+    margin: 15px 0px;
 }
 
 .vision-text{
