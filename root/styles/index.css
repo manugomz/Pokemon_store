@@ -114,7 +114,6 @@ footer{
     align-content: center;
 }
 
-
 div>a>i{
     padding-right: 3%;
     font-size: 1.5em;
@@ -150,10 +149,7 @@ div>ul>li {
     padding: 1em 0px;
 }
 
-/*----------------------- responsive----------------------*/
-@media only screen and (max-width:1024px){
-    
-}
+/*---------------------------------------------- responsive---------------------------------------------*/
 
 @media only screen and (max-width:768px){
     section{
