@@ -109,7 +109,7 @@ section{
 }
 
 /*----------------------------------Cards ------------------------------*/
-.cards-display{
+#cards-display{
     width: 90%;
     display:grid;
     grid-template-columns:25% 25% 25% 25%;
