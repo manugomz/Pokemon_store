@@ -1,10 +1,11 @@
 const url ="https://pokeapi.co/api/v2/pokemon/";
 
-//const url = 'https://rickandmortyapi.com/api/character/'
-const parentElement =document.getElementById('cards-display');
+const $parentElement =document.getElementById('cards-display');
 
 const fetchApi = async(url) => {
+    
     try {
+        $parentElement.innerHTML= `<span class="loader"></span>`;
         const res =await fetch(url);
         const data = await res.json();
         let card =document.createElement('div');
@@ -47,19 +48,6 @@ const fetchApi = async(url) => {
     }    
 }
 
-
-for (let i =1; i<=20;i++){
-        
-        
+for (let i =1; i<=20;i++){     
         fetchApi(url+i);
-        
-        //TODO: change for every card
-        /*
-        pokeName.textContent=data.name;
-        pokeImage.src=data.sprites.other.dream_world.front_default;
-        pokeImage.alt= data.name;
-        cardPower.textContent=data.base_experience;
-        */
-
-
 }

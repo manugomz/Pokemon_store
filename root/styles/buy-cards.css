@@ -1,70 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Plus Jakarta Sans";  
-    list-style: none;
-    font-size: 16px;
-}
-
-.logo {
-    width: 15vw;
-    margin: 1% 3%;
-}
-
-button:hover{
-    box-shadow: 0px 0.3em 0.5em rgba(0, 0, 0, 0.3);
-}
-
-/* -------------------------------------Header-------------------------------------*/
-
-header{
-    background-color: #306BB3;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:100vw;
-}
-
-header>div{
-    display: flex;
-    width: 70%;
-    justify-content: space-around;
-    align-items: center;
-    gap:5%
-
-}
-
-nav{
-    width:70%;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10%;
-    font-weight: 500;  
-}
-
-a{
-    color: white;
-    text-decoration: none;
-}
-
-a:hover{
-    color: white;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-button{
-    color: #306BB3;
-    background-color: white;
-    padding: 1%;
-    border: none;
-    border-radius: 4px;
-}
-/* -------------------------------------Main--------------------------------------*/
 h1{
     font-size: 3vw;
     font-weight: 500;
@@ -85,11 +18,9 @@ section{
 }
 
 .filter{
-   
     width: 90%;
     display: flex;
     justify-content: space-around;
- 
 }
 
 .filter-option{
@@ -141,7 +72,7 @@ section{
 }
 
 .pokemon-img{
-    background-color: #ffffff;
+    background-color: var(--alt-text-color);
     padding: 8%;
     border: none;
     width: 90%;
@@ -151,8 +82,8 @@ section{
 }
 
 .buy-button{
-    color: white;
-    background-color: #306BB3;
+    color: var(--alt-text-color);
+    background-color: var(--primary-color);
     font-weight: 600;
     padding: 5% 10%;
     border: none;
@@ -171,8 +102,8 @@ section{
 }
 
 .more-button {
-    color: white;
-    background-color: #306BB3;
+    color: var(--alt-text-color);
+    background-color: var(--primary-color);
     width: 12vw;
     font-weight: 600;
     padding: 2% 2%;
@@ -180,142 +111,21 @@ section{
     margin: 4% 0;
 }
 
-/* --------------------------------------footer---------------------------------------*/
-footer{
-    background-color: #306BB3;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-}
-
-div>a>i{
-    padding-right: 3%;
-    font-size: 1.5em;
-}
-
-div>ul>li {
-    padding: 0.4em 0px;
-}
-
-.page-info{
-    display: flex;
-    width: 55%;
-    justify-content: space-around;
-    padding: 3vw 0px;
-}
-
-.title-blue {
-    color: white;
-    font-weight: bold;
-    margin: 1vw 0px;
-}
-
-.vision-text{
-    color: white;
-}
-
-#other-media{
-    width: 23%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
-    padding: 1em 0px;
-}
-
-div>a>i:hover{
-    font-size: 1.7em;
-}
-
 /* ---------------------------------responsive------------------------------------------------*/
 
 @media only screen and (max-width:912px){
-.more-cards-info{
-    width: 55%;
-}
-
-.more-button {
-    width: 30%;
-    margin-left: 5%;
-}
+    .more-cards-info{
+        width: 55%;
+    }
+    
+    .more-button {
+        width: 30%;
+        margin-left: 5%;
+    }
 }
 
 @media only screen and (max-width:576px){
-    *{
-        font-size: 12px;  
-    }
-
     .subtitle{
         width: 80%;
     }
 }
-
-@media only screen and (max-width:390px){
-    *{font-size: 3vw;}
-
-    /*----------Header-----------*/
-    header{
-        flex-direction: column;
-    }
-
-    .logo{
-        width: 30%;
-        align-self: center;
-    }
-
-    header>div{
-        width: 100%;
-        padding: 4% 0%;
-    }
-
-    nav{
-        width:65%;
-    }
-
-    .nav-list { /*header ul*/
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    nav>ul>li{
-        font-size: 12px;
-    }
- 
-    button{
-        font-size: 0.8em;
-    }
-
-    /*---------------------Main--------------------*/
-    
-    /*---------------------Footer----------------------*/
-    footer{
-        flex-direction: column;
-    }
-
-    .page-info{
-        width: 100%;
-        padding-bottom: 2em;
-    }
-
-    #other-media{
-        width: 100%;
-     
-    }
-
-    #other-media>div{
-        display: flex;
-        width: 50%;
-        justify-content: space-around;
-        align-self: center; 
-    }
-
-    .vision-text{
-        margin-left: 2em;
-    }
-
-    .page-info>div>ul>li>a{
-        font-size: 0.8em;
-    }
-}
-
