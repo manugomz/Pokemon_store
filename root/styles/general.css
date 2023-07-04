@@ -1,8 +1,11 @@
 :root {
     --primary-color:#306BB3;
     --alt-text-color: #fff;
-    --dark-color:#1a202c;  
-    --gray-text: rgb(160, 160, 160);
+    --dark-color:#1A202C;  
+    --gray: #a2a2a8;
+    --light-text: #1a202c81;
+    --dark-title: #486284;
+    --filter-option:#1a202c6c;
 }
 
 *{
@@ -20,21 +23,21 @@
 }
 
 button:hover{
-    box-shadow: 0px 0.3em 0.5em rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0.3em 0.5em #0000004d;
 }
 
 .dark-mode-bg{
     background-color: var(--dark-color);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .dark-mode-txt{   
     color: var(--alt-text-color);
-    transition: 1s;
+    transition: 0.5s;
 } 
 .dark-mode-link{   
-    color: var(--gray-text);
-    transition: 0.2s;
+    color: var(--gray);
+    transition: 0.5s;
 } 
 
 .dark-mode-link:hover{   
@@ -42,7 +45,7 @@ button:hover{
     text-decoration: none;
     border-bottom: 2px solid var(--alt-text-color);
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.5s;
 } 
 
 /* -------------------------------------Header-------------------------------------*/
@@ -102,7 +105,7 @@ body{
 
 /* --------------------------------------footer---------------------------------------*/
 footer{
-    background-color: #306BB3;
+    background-color: var(--primary-color);
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -228,10 +231,11 @@ div>a>i:hover{
     height: 48px;
     border-radius: 50%;
     display: inline-block;
-    border-top: 4px solid #FFF;
+    border-top: 4px solid var(--primary-color);
     border-right: 4px solid transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
+    margin: 20px 0px;
 }
 
 .loader::after {
@@ -245,6 +249,8 @@ div>a>i:hover{
     border-radius: 50%;
     border-bottom: 4px solid #d6c400;
     border-left: 4px solid transparent;
+    align-self: center;
+    margin-top: 10%;
 }
 
 @keyframes rotation {

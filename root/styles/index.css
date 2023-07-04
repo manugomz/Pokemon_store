@@ -26,7 +26,7 @@ h1{
 }
 
 article>p{
-    color: #1a202c81;
+    color: var(--light-text);
 }
 
 article>div{

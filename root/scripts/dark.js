@@ -1,21 +1,21 @@
-/*-------------------------------------------------Dark mode----------------------------------------------------------------- */
+/*------------------------------------Dark mode--------------------------------------------------- */
 const darkButton = document.getElementById('dark-button');
 const textLists = document.querySelectorAll('.to-dark');
 const textLinks = document.querySelectorAll('.to-dark-link');
 const colorBack = document.body;
 
-//console.log(textLists);
+if(sessionStorage.darkMode === 'on'){
+    darkModeToggle();
+}
 
 darkButton.addEventListener("click",()=>{
-    if (sessionStorage.darkMode === "off") {
-        sessionStorage.darkMode = "on";
-    } else {
+    if (sessionStorage.darkMode === "on") {
         sessionStorage.darkMode = "off";
+    } else {
+        sessionStorage.darkMode = "on";
     }
-    darkModeToggle()
+    darkModeToggle();
 });
-
-
 
 function darkModeToggle () {
     colorBack.classList.toggle('dark-mode-bg');

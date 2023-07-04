@@ -1,7 +1,7 @@
 h1{
     font-size: 3vw;
     font-weight: 500;
-    color: #486284;
+    color: var(--dark-title);
     margin-bottom: 2%;
 }
 
@@ -18,28 +18,39 @@ section{
 }
 
 .filter{
-    width: 90%;
+    width: 86%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.to-dark-link{
-    color: #1a202c99;
+.filter-option{
+    color: var(--filter-option);
     margin: 2% 0px;
     width: 100%;
     padding-bottom: 1%;
     margin-bottom: 1%;
-    border-bottom: 2px solid #90A3BF;
+    border-bottom: 2px solid var(--gray);
     text-align: center;
+    text-transform: capitalize;
     
 }
 
 .to-dark-link:hover{
-    color: #1A202C;
+    color: var(--dark-color);
     font-weight: bold;
-    border-bottom: 2px solid #1A202C;
+    border-bottom: 2px solid var(--dark-color);
     cursor: pointer;
 }
+
+.arrow{
+    color: var(--gray);
+}
+
+.arrow:hover{
+    color: var(--dark-color);
+}
+
 
 /*----------------------------------Cards ------------------------------*/
 #cards-display{
@@ -47,6 +58,10 @@ section{
     display:grid;
     grid-template-columns:25% 25% 25% 25%;
     margin-left: 2%;
+}
+h6 {
+ color: black;
+ text-transform: capitalize;
 }
 
 .card{

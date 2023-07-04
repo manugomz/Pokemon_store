@@ -3,7 +3,7 @@ h1{
     font-size: 3em;
     text-align: center;
     font-weight: 500;
-    color: #486284;
+    color:var(--dark-title) ;
 }
 
 article{

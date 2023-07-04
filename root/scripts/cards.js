@@ -1,18 +1,66 @@
 /*--------------Dom handle-----------------*/
 const $parentElement =document.getElementById('cards-display');
+const moreCardsButton =document.querySelector('.more-button');
+const numberCards =document.querySelector('.number');
+const pokemonTypeFilters = document.querySelectorAll('.filter-option');
+
 
 /*-----------Global variables--------------*/
+let offset;
+let offsetType;
+let number;
+let pokemonTypes= ['all','normal','fighting','flying','ground','rock','bug','ghost','steel','fire','water'];
+let type='all';
 
-let indexPage=0;
 const url ="https://pokeapi.co/api/v2/pokemon/";
+
+/* CODE */
+
+const initGlobal= ()=>{
+    offset=0;
+    $template = ``;
+    number =20;
+    numberCards.textContent=`${number} cards`;
+    return (offset,number)
+}
+initGlobal();
+
+/*----------------------------filter pokemon---------------------------------------*/
+
+const filterPokemon=(position)=>{
+    type= pokemonTypeFilters[position].textContent;
+        initGlobal();
+        cardDisplay();
+    
+}
+
+let filteredPokemon =async(type)=>{
+    urltype=`https://pokeapi.co/api/v2/type/${type}/`;  
+    const pokemonAPI = await fetchApi(urltype);
+    const pokeList =[];
+    await pokemonAPI.pokemon.map(x =>{
+        pokeList.push(x.pokemon);
+    });
+    console.log(pokeList);
+    let limitedPokelist=pokeList.slice(offset,offset+20);
+    return limitedPokelist;
+}
+
+pokemonTypeFilters[0].addEventListener('click',()=>filterPokemon(0));
+pokemonTypeFilters[1].addEventListener('click',()=>filterPokemon(1));
+pokemonTypeFilters[2].addEventListener('click',()=>filterPokemon(2));
+pokemonTypeFilters[3].addEventListener('click',()=>filterPokemon(3));
+
 
 /*--------------------------------------Cards display------------------------------------------------- */
 const fetchApi = async(url) => {
     try {
         $parentElement.innerHTML= `<span class="loader"></span>`;
+        $parentElement.style.width="auto";
         let res =await fetch(url);
         let json = await res.json();
         if (!res.ok) throw { status: res.status, statusText: res.statusText };
+        $parentElement.style.width="90%";
         return json;
     } catch (error) {
         const errorMsg = document.createElement('p');
@@ -21,18 +69,27 @@ const fetchApi = async(url) => {
     }  
 }
 
-const pokemonList = async() =>{
-    const pokemonAPI = await fetchApi(url);
-    return pokemonAPI.results;
+const pokemonList = async(offset,type) =>{
+    let urltype=``;
+    if(type==='all'){
+        urltype=`${url}?offset=${offset}`;
+        const pokemonAPI = await fetchApi(urltype);
+        return pokemonAPI.results;
+    }else{
+        return filteredPokemon(type);
+    }
+
+}
+const eachPokeURL = async(List)=>{
+    let pokemonURL=[];
+    List.map(x =>{
+        pokemonURL.push(x.url);
+    });
+    return pokemonURL
 }
 
-(async()=>{
-    
-
-})()
-
 const pokemonData = async()=>{
-    const list= await pokemonList();
+    const list= await pokemonList(offset,type);
     let listURL =await eachPokeURL(list);
     let pokemonInfo = [];
     for (i=0;i<listURL.length;i++){
@@ -42,18 +99,9 @@ const pokemonData = async()=>{
     return pokemonInfo;
 }
 
-const eachPokeURL = async(List)=>{
-    let pokemonURL=[];
-    List.map(x =>{
-        pokemonURL.push(x.url);
-    });
-    return pokemonURL
-}
 
 const cardDisplay = async()=>{
     let pokemon = await pokemonData();
-    let $template = ``;
-
     for (i=0;i<20;i++){
         $template += `
         <div class="card">
@@ -73,3 +121,18 @@ const cardDisplay = async()=>{
 }
 
 cardDisplay();
+
+
+/*--------------------------more cards------------------------------------- */
+
+
+moreCardsButton.addEventListener('click', (event) =>{
+    offset +=20;
+    number +=20;
+    cardDisplay();
+    numberCards.textContent=`${number} cards`;
+    event.preventDefault();
+})
+
+/*---------------------------move filters------------------------------------*/
+
