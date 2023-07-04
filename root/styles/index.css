@@ -1,4 +1,6 @@
 /* -------------------------------------Main--------------------------------------*/
+
+
 section{
     display: flex;
     justify-content: space-around;
@@ -39,11 +41,11 @@ article>div{
     color: var(--dark-color);
     font-weight: bold;
     margin: 5% 5%;
+    transition: 1s;
 }
 
 .to-dark-link:hover{
     color: var(--dark-color);
-    text-decoration: none;
 }
 
 /*---------------------------------------------- responsive---------------------------------------------*/

@@ -25,18 +25,24 @@ button:hover{
 
 .dark-mode-bg{
     background-color: var(--dark-color);
+    transition: 1s;
 }
 
 .dark-mode-txt{   
     color: var(--alt-text-color);
+    transition: 1s;
 } 
 .dark-mode-link{   
     color: var(--gray-text);
+    transition: 0.2s;
 } 
 
 .dark-mode-link:hover{   
     color: var(--alt-text-color);
+    text-decoration: none;
     border-bottom: 2px solid var(--alt-text-color);
+    cursor: pointer;
+    transition: 0.2s;
 } 
 
 /* -------------------------------------Header-------------------------------------*/
@@ -86,6 +92,12 @@ button{
     padding: 1%;
     border: none;
     border-radius: 4px;
+}
+
+/*-------------------------------------main-----------------------------------------------*/
+body{
+    background-color: var(--alt-text-color);
+    transition: 1s;
 }
 
 /* --------------------------------------footer---------------------------------------*/

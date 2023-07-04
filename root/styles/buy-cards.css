@@ -31,12 +31,14 @@ section{
     margin-bottom: 1%;
     border-bottom: 2px solid #90A3BF;
     text-align: center;
+    
 }
 
 .to-dark-link:hover{
     color: #1A202C;
     font-weight: bold;
     border-bottom: 2px solid #1A202C;
+    cursor: pointer;
 }
 
 /*----------------------------------Cards ------------------------------*/
