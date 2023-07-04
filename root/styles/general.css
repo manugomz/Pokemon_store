@@ -1,7 +1,8 @@
 :root {
     --primary-color:#306BB3;
     --alt-text-color: #fff;
-    --text-color:#1a202c;  
+    --dark-color:#1a202c;  
+    --gray-text: rgb(160, 160, 160);
 }
 
 *{
@@ -21,6 +22,22 @@
 button:hover{
     box-shadow: 0px 0.3em 0.5em rgba(0, 0, 0, 0.3);
 }
+
+.dark-mode-bg{
+    background-color: var(--dark-color);
+}
+
+.dark-mode-txt{   
+    color: var(--alt-text-color);
+} 
+.dark-mode-link{   
+    color: var(--gray-text);
+} 
+
+.dark-mode-link:hover{   
+    color: var(--alt-text-color);
+    border-bottom: 2px solid var(--alt-text-color);
+} 
 
 /* -------------------------------------Header-------------------------------------*/
 

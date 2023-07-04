@@ -15,7 +15,7 @@ article{
 
 .small-text{
     font-size: 0.9em;
-    color: var(--text-color);
+    color: var(--dark-color);
 }
 
 h1{
@@ -35,14 +35,15 @@ article>div{
     max-width: 40%;
 }
 
-.links-article{
-    color: var(--text-color);
+.to-dark-link{
+    color: var(--dark-color);
     font-weight: bold;
     margin: 5% 5%;
 }
 
-.links-article:hover{
-    color: var(--text-color);
+.to-dark-link:hover{
+    color: var(--dark-color);
+    text-decoration: none;
 }
 
 /*---------------------------------------------- responsive---------------------------------------------*/
